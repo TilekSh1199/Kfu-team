@@ -217,7 +217,6 @@ Tags: light, one-column, two-columns, right-sidebar, fluid-layout, custom-header
  
  h5, .h5 {
    font-size: 16px;
-   line-height: 24px;
  }
  
  h6, .h6, .filters-options li {
@@ -1377,7 +1376,7 @@ Tags: light, one-column, two-columns, right-sidebar, fluid-layout, custom-header
  
  body {
    background: #fff;
-   font-family: "Open Sans", sans-serif;
+   font-family: 'Lora', serif;
    color: #666666;
    font-size: 13px;
    line-height: 22px;
@@ -2223,7 +2222,7 @@ Tags: light, one-column, two-columns, right-sidebar, fluid-layout, custom-header
  
  .main-nav-mobile .main-menu-mobile > li > a, .bottom-nav-mobile .main-menu-mobile > li > a {
    color: #333333;
-   font-family: "Lora", serif !important;
+   font-family: 'Lora', serif !important;
    text-transform: capitalize;
    font-size: 14px;
    display: block;
@@ -2251,7 +2250,7 @@ Tags: light, one-column, two-columns, right-sidebar, fluid-layout, custom-header
    right: auto;
    top: auto;
    font-size: 14px;
-   font-family: "Lora", serif !important;
+   font-family: 'Lora', serif !important;
  }
  
  .main-nav-mobile .main-menu-mobile > li > a > span:first-child:after, .bottom-nav-mobile .main-menu-mobile > li > a > span:first-child:after {
@@ -5572,7 +5571,7 @@ Tags: light, one-column, two-columns, right-sidebar, fluid-layout, custom-header
  .kopa-tab.style3 .nav-tabs > li > a, .kopa-tab.style6 .nav-tabs > li > a, .kopa-tab.fixture-tab .nav-tabs > li > a, .kopa-tab.team-tab .nav-tabs > li > a {
    margin-right: 0;
    background: none;
-   font-family: "Lora", sans-serif;
+   font-family: 'Lora', serif;
    font-size: 16px;
    line-height: 24px;
    color: white !important;
@@ -5856,7 +5855,7 @@ Tags: light, one-column, two-columns, right-sidebar, fluid-layout, custom-header
  }
  
  .kopa-point-widget .point-item .point-left .point-content > p {
-   font-family: "Lora", sans-serif;
+   font-family: 'Lora', serif;
    font-weight: 500;
    font-size: 18px;
    line-height: 26px;
@@ -5901,7 +5900,7 @@ Tags: light, one-column, two-columns, right-sidebar, fluid-layout, custom-header
    margin: 20px 20px 16px;
    padding: 8px 15px;
    background: #06335c;
-   font-family: "Lora", sans-serif;
+   font-family: 'Lora', serif;
    /* font-weight: 600; */
    font-size: 20px;
    line-height: 28px;
@@ -7830,7 +7829,7 @@ Tags: light, one-column, two-columns, right-sidebar, fluid-layout, custom-header
    float: left;
    min-height: 1px;
    position: relative;
-   padding: 0 15px;
+  //  padding: 0 15px;
  }
  
  .widget-area-22 {
@@ -9775,7 +9774,7 @@ Tags: light, one-column, two-columns, right-sidebar, fluid-layout, custom-header
  }
  
  #bottom-sidebar a:hover {
-   color: #e82231;
+   color: #f5b904;
  }
  
  #bottom-sidebar .kopa-divider {
@@ -9963,7 +9962,7 @@ Tags: light, one-column, two-columns, right-sidebar, fluid-layout, custom-header
  }
  
  #copyright a:hover {
-   color: #e82231;
+   color: #f5b904;
  }
  
  .kopa-footer-nav .footer-menu li {
@@ -10162,7 +10161,7 @@ Tags: light, one-column, two-columns, right-sidebar, fluid-layout, custom-header
      margin-top: -40px;
    }
    .kopa-logo-2{
-     height:186%;
+     height: 100%;
    }
    .sync1 .entry-item .entry-content .entry-title, .sync5 .entry-item .entry-content .entry-title, .sync5 .entry-item .entry-content .entry-title {
      font-size: 40px;
@@ -10748,6 +10747,10 @@ Tags: light, one-column, two-columns, right-sidebar, fluid-layout, custom-header
    .kopa-logo .site-title, .kopa-logo-2 .site-title, .kopa-logo-2 .site-title {
      font-size: 16px;
    }
+
+   .kopa-point-widget{
+     display: none;
+   }
  }
  
  @media screen and (max-width: 359px) {
@@ -10836,12 +10839,13 @@ Tags: light, one-column, two-columns, right-sidebar, fluid-layout, custom-header
    display: flex;
    justify-content: space-between;
    align-items: center;
+   list-style: none;
+   width: 100%;
+   margin-bottom: 15px;
  
-   /* -webkit-box-pack: justify;
-       -ms-flex-pack: justify;
-   -webkit-box-align: center;
-       -ms-flex-align: center;
-           align-items: center; */
+   &:before{
+     content: none !important;
+    }
  }
  
  .footer-ul-a {
@@ -10877,6 +10881,18 @@ Tags: light, one-column, two-columns, right-sidebar, fluid-layout, custom-header
    padding: 15px;
    font-size: 20px;
    margin-bottom: 15px;
+   border: 2px solid black;
+
+   &::placeholder{
+     color: black;
+     font-family: "Oswald", sans-serif;
+     font-weight: 500;
+     font-size: 16px;
+   }
+ }
+
+ .search-inp-div{
+   width: 30%;
  }
  
  .show-alphabet{
@@ -10889,7 +10905,7 @@ Tags: light, one-column, two-columns, right-sidebar, fluid-layout, custom-header
  }
  
  .search-inner-box{
-   border: 1px solid #06335c;
+   border: 2px solid black;
    border-radius: 10px;
    width: 30%;
    padding: 13px;
@@ -11032,6 +11048,7 @@ Tags: light, one-column, two-columns, right-sidebar, fluid-layout, custom-header
    }
    .search-inner-box{
      width: 100%;
+     text-align: start;
    }
   .search-player-box{
     flex-wrap: wrap !important;
@@ -11041,7 +11058,7 @@ Tags: light, one-column, two-columns, right-sidebar, fluid-layout, custom-header
  @media all and (max-width: 426px) {
    
    .search-inner-box{
-     width:90%
+     width:100%
    }
    .details-img{
      height: 200px;
